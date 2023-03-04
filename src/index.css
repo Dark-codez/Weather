@@ -28,6 +28,7 @@ form{
   padding-bottom: 50px;
   width: min(100%,500px);
   border-radius: 40px;
+  transition: all .3s;
 }
 .searchBar{
   display: flex;
