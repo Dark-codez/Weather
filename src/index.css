@@ -28,7 +28,6 @@ form{
   padding-bottom: 50px;
   width: min(100%,500px);
   border-radius: 40px;
-  transition: all .3s;
 }
 .searchBar{
   display: flex;
@@ -60,11 +59,6 @@ form input[type = 'text']::placeholder{
   text-align: left;
   font-size: 1.1rem;
   color: #fff;
-  font-family: 'Righteous', cursive;
-}
-form h2{
-  padding: 30px 0 10px;
-  text-align: left;
   font-family: 'Righteous', cursive;
 }
 form h3{
@@ -104,4 +98,10 @@ img{
   }100%{
     transform: scale(1);
   }
+}
+.country{
+  text-align: left;
+  font-size: clamp(18px,3rem,24px);
+  font-family: 'Righteous', cursive;
+  color: powderblue;
 }
