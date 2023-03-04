@@ -35,7 +35,9 @@ function App() {
               refetch()
           }}><i className ="fa fa-hand-pointer fa-2x"></i></button>
         </div>
-        {isError && <p>unable to retrieve data</p>}
+        {isError && <p style = {{
+                               fontSize: "clamp(16px,1.2rem,20px)"
+                               }}>unable to retrieve data</p>}
 
         <div className = 'image'>
           { data && Math.floor((data?.main?.temp - 273.15)) < 40 && Math.floor((data?.main?.temp - 273.15)) > 20? <img    src = {cloudy} /> : null }  
