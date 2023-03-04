@@ -56,6 +56,7 @@ function App() {
         <div className='degree'>
           <h1>
           {data?.message == "city not found" && <p style = {{
+            fontSize: "clamp(16px,1.2rem,20px)",
             textAlign: "left"
           }}>No results found</p>}
           {(data && data?.cod !== "404") && <p>{Math.floor((data?.main?.temp - 273.15))}&#8451;</p>} 
