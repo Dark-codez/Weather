@@ -26,7 +26,7 @@ function App() {
           <input 
             type = 'text' 
             name = 'searchbar' 
-            placeholder = "City Name...."
+            placeholder = "Enter your city name"
             onChange={(e) => {
               setCity(e.currentTarget.value)
             }}
@@ -35,9 +35,7 @@ function App() {
               refetch()
           }}><i className ="fa fa-hand-pointer fa-2x"></i></button>
         </div>
-        {isError && <p style = {{
-                               fontSize: "clamp(16px,1.2rem,20px)"
-                               }}>unable to retrieve data</p>}
+        {isError && <div>unable to retrieve data</div>}
 
         <div className = 'image'>
           { data && Math.floor((data?.main?.temp - 273.15)) < 40 && Math.floor((data?.main?.temp - 273.15)) > 20? <img    src = {cloudy} /> : null }  
@@ -54,15 +52,18 @@ function App() {
         { data && Math.floor((data?.main?.temp - 273.15)) > 70 ? <h3>It's Really Hot </h3> : null }  
 
         <div className='degree'>
+          <h1>
           {data?.message == "city not found" && <p style = {{
-            fontSize: "clamp(16px,1.2rem,20px)",
             textAlign: "left"
           }}>No results found</p>}
-          <h1>
           {(data && data?.cod !== "404") && <p>{Math.floor((data?.main?.temp - 273.15))}&#8451;</p>} 
           </h1>
         </div>
-
+        {data && (
+          <>
+            <p className = "country">Country: {data?.sys?.country}</p>
+          </>
+        )}
         <div className = "extraData">
           <li>
             <i className="fas fa-wind fa fa-3x" style = {{
