@@ -26,7 +26,7 @@ function App() {
           <input 
             type = 'text' 
             name = 'searchbar' 
-            placeholder = "Enter your city name"
+            placeholder = "City Name...."
             onChange={(e) => {
               setCity(e.currentTarget.value)
             }}
@@ -35,7 +35,7 @@ function App() {
               refetch()
           }}><i className ="fa fa-hand-pointer fa-2x"></i></button>
         </div>
-        {isError && <div>unable to retrieve data</div>}
+        {isError && <p>unable to retrieve data</p>}
 
         <div className = 'image'>
           { data && Math.floor((data?.main?.temp - 273.15)) < 40 && Math.floor((data?.main?.temp - 273.15)) > 20? <img    src = {cloudy} /> : null }  
