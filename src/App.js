@@ -26,7 +26,7 @@ function App() {
           <input 
             type = 'text' 
             name = 'searchbar' 
-            placeholder = "Enter your city name"
+            placeholder = "City Name..."
             onChange={(e) => {
               setCity(e.currentTarget.value)
             }}
