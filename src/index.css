@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+:root{
+  --color: teal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: rgb(141, 141, 187);
+  color: #ddd;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  background: rgb(1, 1, 10);
+	padding: 60px 40px 40px;
+	transition: all .2s;
+	position: relative;
+  padding-bottom: 50px;
+  width: min(100%,500px);
+  border-radius: 40px;
+}
+.searchBar{
+  display: flex;
+  justify-content: space-between;
+}
+.searchBar > *:nth-child(1){
+  flex: 0 0 75%;
+}
+.searchBar > *:nth-child(2){
+  flex: 0 0 20%;
+  cursor: pointer;
+  transition: all .2s;
+}
+.searchBar > *:nth-child(2):active{
+  transform: scale(.9);
+}
+form input[type = 'text']{
+  width: 100%;
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  background: #04559781;
+  font-size: 1.1rem;
+  color: #fff;
+  font-family: 'Righteous', cursive;
+  border-radius: 10px;
+}
+form input[type = 'text']::placeholder{
+  text-align: left;
+  font-size: 1.1rem;
+  color: #fff;
+  font-family: 'Righteous', cursive;
+}
+form h2{
+  padding: 30px 0 10px;
+  text-align: left;
+  font-family: 'Righteous', cursive;
+}
+form h3{
+  font-family: 'Righteous', cursive;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.degree{
+  font-size: clamp(18px,3rem,30px);
+  font-family: 'Righteous', cursive;
+  text-align: left;
+}
+.extraData{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.extraData > *{
+  flex: 1 1 0;
+  font-family: 'Righteous', cursive;
+}
+.info{
+  padding: 5px 0 5px;
+}
+.image{
+  animation: animate 1.4s linear infinite;
+}
+img{
+  width: 150px;
+  object-fit: cover;
+}
+@keyframes animate{
+  0%{
+    transform: scale(1);
+  }50%{
+    transform: scale(1.2);
+  }100%{
+    transform: scale(1);
+  }
+}
