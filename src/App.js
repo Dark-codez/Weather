@@ -53,10 +53,10 @@ function App() {
         { data && Math.floor((data?.main?.temp - 273.15)) > 70 ? <h3>It's Really Hot </h3> : null }  
 
         <div className='degree'>
-          <h1>
           {data?.message == "city not found" && <p style = {{
             textAlign: "left"
           }}>No results found</p>}
+          <h1>
           {(data && data?.cod !== "404") && <p>{Math.floor((data?.main?.temp - 273.15))}&#8451;</p>} 
           </h1>
         </div>
