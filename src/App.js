@@ -32,6 +32,7 @@ function App() {
             }}
           />
           <button onClick = {() => {
+              if(city == "") return;
               refetch()
           }}><i className ="fa fa-hand-pointer fa-2x"></i></button>
         </div>
