@@ -26,7 +26,7 @@ function App() {
           <input 
             type = 'text' 
             name = 'searchbar' 
-            placeholder = "City Name..."
+            placeholder = "Enter your city name"
             onChange={(e) => {
               setCity(e.currentTarget.value)
             }}
@@ -36,7 +36,7 @@ function App() {
               refetch()
           }}><i className ="fa fa-hand-pointer fa-2x"></i></button>
         </div>
-        {isError && <div>unable to retrieve data</div>}
+        {isError && <p>unable to retrieve data</p>}
 
         <div className = 'image'>
           { data && Math.floor((data?.main?.temp - 273.15)) < 40 && Math.floor((data?.main?.temp - 273.15)) > 20? <img    src = {cloudy} /> : null }  
@@ -48,7 +48,8 @@ function App() {
         { data && Math.floor((data?.main?.temp - 273.15)) <= 0 ? <h3>It's beyond Freezing </h3> : null }  
         { data && Math.floor((data?.main?.temp - 273.15)) <= 10 && Math.floor((data?.main?.temp - 273.15)) > 0 ? <h3>It's Freezing </h3> : null }  
         { data && Math.floor((data?.main?.temp - 273.15)) <= 30 && Math.floor((data?.main?.temp - 273.15)) > 10 ? <h3>It's Cold </h3> : null }  
-        { data && Math.floor((data?.main?.temp - 273.15)) <= 40 && Math.floor((data?.main?.temp - 273.15)) > 30 ? <h3>It's Cool </h3> : null }  
+        { data && Math.floor((data?.main?.temp - 273.15)) <= 35 && Math.floor((data?.main?.temp - 273.15)) > 30 ? <h3>It's Cool </h3> : null }  
+        { data && Math.floor((data?.main?.temp - 273.15)) <= 40 && Math.floor((data?.main?.temp - 273.15)) > 35 ? <h3>It's Warm </h3> : null }  
         { data && Math.floor((data?.main?.temp - 273.15)) >= 50 && Math.floor((data?.main?.temp - 273.15)) <= 70 ? <h3>It's Hot </h3> : null }  
         { data && Math.floor((data?.main?.temp - 273.15)) > 70 ? <h3>It's Really Hot </h3> : null }  
 
