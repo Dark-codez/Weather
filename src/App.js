@@ -50,7 +50,7 @@ function App() {
         { data && Math.floor((data?.main?.temp - 273.15)) <= 30 && Math.floor((data?.main?.temp - 273.15)) > 10 ? <h3>It's Cold </h3> : null }  
         { data && Math.floor((data?.main?.temp - 273.15)) <= 35 && Math.floor((data?.main?.temp - 273.15)) > 30 ? <h3>It's Cool </h3> : null }  
         { data && Math.floor((data?.main?.temp - 273.15)) <= 40 && Math.floor((data?.main?.temp - 273.15)) > 35 ? <h3>It's Warm </h3> : null }  
-        { data && Math.floor((data?.main?.temp - 273.15)) >= 50 && Math.floor((data?.main?.temp - 273.15)) <= 70 ? <h3>It's Hot </h3> : null }  
+        { data && Math.floor((data?.main?.temp - 273.15)) > 40 && Math.floor((data?.main?.temp - 273.15)) <= 70 ? <h3>It's Hot </h3> : null }  
         { data && Math.floor((data?.main?.temp - 273.15)) > 70 ? <h3>It's Really Hot </h3> : null }  
 
         <div className='degree'>
