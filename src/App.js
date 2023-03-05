@@ -41,7 +41,7 @@ function App() {
         <div className = 'image'>
           { data && Math.floor((data?.main?.temp - 273.15)) < 40 && Math.floor((data?.main?.temp - 273.15)) > 20? <img    src = {cloudy} /> : null }  
           { data && Math.floor((data?.main?.temp - 273.15)) < 20 ? <img src = {snowy} /> : null }  
-          { data && Math.floor((data?.main?.temp - 273.15)) > 40 ? <img src = {hot} /> : null }  
+          { data && Math.floor((data?.main?.temp - 273.15)) >= 40 ? <img src = {hot} /> : null }  
         </div>
 
 
