@@ -28,9 +28,6 @@ form{
   width: min(100%,500px);
   border-radius: 40px;
 }
-form:focus-within{
-  background: rgb(1, 15, 20);
-}
 .searchBar{
   display: flex;
   justify-content: space-between;
