@@ -19,6 +19,7 @@ function App() {
   })  
   return (
     <>
+      <p>Prime leave me alone :)</p>
       <form onSubmit={(e) => {
         e.preventDefault();
       }}>
